@@ -1,0 +1,64 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Kanit&family=Open+Sans:ital,wght@0,400;0,700;0,800;1,400&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: sans-serif;
+    background-color: antiquewhite;
+}
+
+.calculator{
+    margin: 50px auto;
+    padding: 30px 30px 30px 30px;
+    max-width: 500px;
+    background-color: rgb(231, 84, 16);
+    border-radius: 10px;
+}
+
+.operandos{
+    width: 100%;
+    padding: 20px;
+    text-align: right;
+    background-color: rgb(216, 209, 209);
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 70px;
+    
+}
+
+ .operandos [data-operando-1]{
+    font-size: 35px;
+} 
+
+.calculator .button_grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+button{
+    padding: 10px;
+    background-color: rgb(123, 126, 119);
+    font-weight: bold;
+    border-radius: 10px;
+    border-width: 5px;
+    border-color: #c9c9c9;
+    font-size: 25px;
+}
+
+button:nth-child(2){
+    grid-column: span 2;
+}
+
+button:last-child{
+    grid-column: span 2;
+    background-color: rgb(242, 255, 127);
+    border-color: rgb(255, 187, 0);
+}
+
