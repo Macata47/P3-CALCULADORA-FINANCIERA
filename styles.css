@@ -1,6 +1,6 @@
 
-  @import url('https://fonts.googleapis.com/css2?family=Kanit&family=Open+Sans:ital,wght@0,400;0,700;0,800;1,400&display=swap');
 
+ 
 
 *{
     box-sizing: border-box;
@@ -10,14 +10,18 @@
 
 body{
     font-family: sans-serif;
-    background-color: antiquewhite;
+    background-color: rgb(71, 71, 68);
+    display: flex
+    
+    
+
 }
 
 .calculator{
-    margin: 50px auto;
-    padding: 30px 30px 30px 30px;
+    margin: 20px 20px 20px 20px;
+    padding: 50px;
     max-width: 500px;
-    background-color: rgb(231, 84, 16);
+    background-color: rgb(16, 17, 15);
     border-radius: 10px;
 }
 
@@ -29,6 +33,7 @@ body{
     margin-bottom: 20px;
     border-radius: 5px;
     font-size: 70px;
+    font-family: monospace;
     
 }
 
@@ -38,19 +43,27 @@ body{
 
 .calculator .button_grid{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
 }
 
 button{
     padding: 10px;
-    background-color: rgb(123, 126, 119);
+    background-color: rgb(250, 106, 10);
     font-weight: bold;
     border-radius: 10px;
     border-width: 5px;
-    border-color: #c9c9c9;
+    border-color: rgb(255, 187, 0);
     font-size: 25px;
+    font-family: monospace;
+    cursor: pointer;
 }
+
+button:hover{
+    background-color: rgb(255, 187, 0);
+
+}
+
 
 button:nth-child(2){
     grid-column: span 2;
@@ -60,5 +73,9 @@ button:last-child{
     grid-column: span 2;
     background-color: rgb(242, 255, 127);
     border-color: rgb(255, 187, 0);
+}
+
+button:last-child:hover{
+    background-color: rgb(63, 70, 3);
 }
 
