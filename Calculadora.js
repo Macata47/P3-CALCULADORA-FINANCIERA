@@ -1,33 +1,32 @@
 
-/* CONSTRUCTOR es un metodo especial para crear e 
-inicializar un objeto creado a partir de una clase. */
+
 
 class Calculator{
    constructor(operand1Element, operand2Element){ 
-    this.operand1Element = operand1Element; //en estos elementos "pintaremos los números"//
+    this.operand1Element = operand1Element; 
     this.operand2Element = operand2Element;
     this.clear();
    }
-// Resetear los operandos de la calculadora
+
    clear(){
     this.operand1 = 0;
     this.operand2 = 0;
     this.operator = '';
-    this.updateUI(); //actualizar la interfaz de usuario
+    this.updateUI(); 
 
     
    }
 
-   // Para ver los operandos mas el operador
+
     updateUI(){
     this.operand1Element.innerHTML = this.operand1 + this.operator;
     this.operand2Element.innerHTML = this.operand2;
     }
 
 
-// Añadir numeros nuevos
+
     appendNumber(number){
-        if(number === "." && this.operand2.includes('.')) return; //Evita añadir varios puntos
+        if(number === "." && this.operand2.includes('.')) return; 
         this.operand2 = this.operand2 === 0
                         ? number
                         : this.operand2.toString() + number;
@@ -43,7 +42,7 @@ class Calculator{
         this.updateUI();
     }
 
-    //Operaciones de la calculadora (+,-,*,/)
+
 
     operation(operator){
         if(this.operator){
@@ -80,7 +79,7 @@ class Calculator{
 
 }
 
-//Interaccion con el DOM (botones)
+
 
 const operand1Element = document.querySelector("[data-operand-1]")
 const operand2Element = document.querySelector("[data-operand-2]")
@@ -92,7 +91,7 @@ const equalsButton = document.querySelector("[data-equals]")
 
 const calculator = new Calculator(operand1Element, operand2Element);
 
-//Llamadas a las funciones de la calculadora
+
 
 clearButton.addEventListener('click', () =>{
     calculator.clear();
