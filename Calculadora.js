@@ -1,6 +1,6 @@
 
-// CONSTRUCTOR es un metodo especial para crear e 
-//inicializar un objeto creado a partir de una clase.
+/* CONSTRUCTOR es un metodo especial para crear e 
+inicializar un objeto creado a partir de una clase. */
 
 class Calculator{
    constructor(operand1Element, operand2Element){ 
@@ -82,8 +82,8 @@ class Calculator{
 
 //Interaccion con el DOM (botones)
 
-const operand1Element = document.querySelector("[data-operand-1")
-const operand2Element = document.querySelector("[data-operand-2")
+const operand1Element = document.querySelector("[data-operand-1]")
+const operand2Element = document.querySelector("[data-operand-2]")
 const clearButton = document.querySelector("[data-clear]")
 const numberButtons = document.querySelectorAll("[data-number]")
 const deleteButton = document.querySelector("[data-delete]")
